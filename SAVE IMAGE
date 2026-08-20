@@ -1,0 +1,8 @@
+# Save an Image
+# Computer Vision Program 03
+# Run with: python 01_basic_opencv/03_save_image.py
+
+import cv2
+from helper import sample_image
+cv2.imwrite("saved_image.jpg", sample_image())
+print("Image saved successfully")
