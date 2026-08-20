@@ -1,0 +1,9 @@
+# Grayscale Conversion
+# Computer Vision Program 05
+# Run with: python 01_basic_opencv/05_grayscale.py
+
+import cv2
+from helper import sample_image
+gray = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+cv2.imwrite("grayscale.jpg", gray)
+print("Grayscale image created")
