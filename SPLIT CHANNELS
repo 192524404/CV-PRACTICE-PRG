@@ -1,0 +1,8 @@
+# Split Color Channels
+# Computer Vision Program 08
+# Run with: python 01_basic_opencv/08_split_channels.py
+
+import cv2
+from helper import sample_image
+b, g, r = cv2.split(sample_image())
+print("Blue:", b.shape, "Green:", g.shape, "Red:", r.shape)
