@@ -1,0 +1,9 @@
+# Display an Image
+# Computer Vision Program 02
+# Run with: python 01_basic_opencv/02_display_image.py
+
+import cv2
+from helper import sample_image
+img = sample_image()
+cv2.imwrite("output_display.jpg", img)
+print("Image saved as output_display.jpg")
