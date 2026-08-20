@@ -1,0 +1,9 @@
+# HSV Conversion
+# Computer Vision Program 06
+# Run with: python 01_basic_opencv/06_hsv.py
+
+import cv2
+from helper import sample_image
+hsv = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2HSV)
+cv2.imwrite("hsv.jpg", hsv)
+print("HSV image created")
