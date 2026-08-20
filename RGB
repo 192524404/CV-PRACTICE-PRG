@@ -1,0 +1,9 @@
+# BGR to RGB
+# Computer Vision Program 07
+# Run with: python 01_basic_opencv/07_rgb.py
+
+import cv2
+from helper import sample_image
+rgb = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2RGB)
+cv2.imwrite("rgb.jpg", cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR))
+print("RGB conversion completed")
