@@ -1,0 +1,9 @@
+# HOG People Detection
+# Computer Vision Program 87
+# Run with: python 09_detection/87_hog_people.py
+
+import cv2
+hog=cv2.HOGDescriptor(); hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+img=cv2.imread("sample_people.jpg")
+if img is None: print("Place sample_people.jpg for HOG detection")
+else: print("People:",len(hog.detectMultiScale(img)[0]))
