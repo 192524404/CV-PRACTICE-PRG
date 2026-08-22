@@ -1,0 +1,11 @@
+# Video Flip
+# Computer Vision Program 80
+# Run with: python 08_video_processing/80_video_flip.py
+
+import cv2
+cap=cv2.VideoCapture("sample.avi"); n=0
+while True:
+ ok,f=cap.read()
+ if not ok: break
+ _=cv2.flip(f,1); n+=1
+cap.release(); print("Flipped frames:",n)
