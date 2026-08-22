@@ -1,0 +1,7 @@
+# Object Tracking
+# Computer Vision Program 98
+# Run with: python 10_ai_applications/98_object_tracking.py
+
+import cv2
+print("OpenCV tracker example")
+print("Trackers available depend on the OpenCV build; CSRT/KCF are common choices.")
