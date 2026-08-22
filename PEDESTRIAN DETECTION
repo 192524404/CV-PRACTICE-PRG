@@ -1,0 +1,7 @@
+# Pedestrian Detection
+# Computer Vision Program 90
+# Run with: python 09_detection/90_pedestrian_detection.py
+
+import cv2
+hog=cv2.HOGDescriptor(); hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+print("HOG pedestrian detector initialized:", hog.getDescriptorSize()>0)
