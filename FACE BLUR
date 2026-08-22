@@ -1,0 +1,12 @@
+# Face Blur
+# Computer Vision Program 86
+# Run with: python 09_detection/86_face_blur.py
+
+import cv2
+det=cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_frontalface_default.xml")
+img=cv2.imread("sample_face.jpg")
+if img is None: print("Place sample_face.jpg")
+else:
+ g=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+ for x,y,w,h in det.detectMultiScale(g,1.1,5): img[y:y+h,x:x+w]=cv2.GaussianBlur(img[y:y+h,x:x+w],(31,31),0)
+ cv2.imwrite("blurred_faces.jpg",img); print("Face blur completed")
