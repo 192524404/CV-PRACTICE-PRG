@@ -1,0 +1,8 @@
+# Homography
+# Computer Vision Program 65
+# Run with: python 07_features_geometry/65_homography.py
+
+import cv2, numpy as np
+p1=np.float32([[0,0],[1,0],[1,1],[0,1]]); p2=np.float32([[10,20],[110,20],[120,120],[10,110]])
+H,_=cv2.findHomography(p1,p2)
+print("Homography matrix:\n",H)
