@@ -1,0 +1,10 @@
+# Morphological Gradient
+# Computer Vision Program 40
+# Run with: python 04_segmentation_edges/40_gradient.py
+
+import cv2, numpy as np
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY)
+out=cv2.morphologyEx(g,cv2.MORPH_GRADIENT,np.ones((5,5),np.uint8))
+cv2.imwrite("gradient.jpg",out)
+print("Gradient created")
