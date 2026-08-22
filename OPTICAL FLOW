@@ -1,0 +1,10 @@
+# Optical Flow
+# Computer Vision Program 77
+# Run with: python 08_video_processing/77_optical_flow.py
+
+import cv2, numpy as np
+a=np.zeros((200,300),np.uint8); cv2.circle(a,(100,100),20,255,-1)
+b=np.zeros_like(a); cv2.circle(b,(110,100),20,255,-1)
+p=cv2.goodFeaturesToTrack(a,20,.01,5)
+flow=cv2.calcOpticalFlowPyrLK(a,b,p,None) if p is not None else None
+print("Tracked points:",0 if flow is None else len(flow[0]))
