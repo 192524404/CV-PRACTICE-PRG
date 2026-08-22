@@ -1,0 +1,9 @@
+# Blur
+# Computer Vision Program 18
+# Run with: python 02_image_processing/18_blur.py
+
+import cv2
+from helper import sample_image
+out = cv2.blur(sample_image(), (7,7))
+cv2.imwrite("blur.jpg", out)
+print("Blur applied")
