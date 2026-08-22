@@ -1,0 +1,10 @@
+# Sobel Edge Detection
+# Computer Vision Program 33
+# Run with: python 04_segmentation_edges/33_sobel.py
+
+import cv2
+from helper import sample_image
+gray = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+out = cv2.Sobel(gray,cv2.CV_64F,1,0,ksize=3)
+cv2.imwrite("sobel.jpg", cv2.convertScaleAbs(out))
+print("Sobel applied")
