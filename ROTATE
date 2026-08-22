@@ -1,0 +1,10 @@
+# Rotate Image
+# Computer Vision Program 12
+# Run with: python 02_image_processing/12_rotate.py
+
+import cv2
+from helper import sample_image
+img = sample_image()
+rot = cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE)
+cv2.imwrite("rotated.jpg", rot)
+print("Rotated")
