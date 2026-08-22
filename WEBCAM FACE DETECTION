@@ -1,0 +1,9 @@
+# Webcam Face Detection
+# Computer Vision Program 84
+# Run with: python 09_detection/84_webcam_face_detection.py
+
+import cv2
+print("Webcam demo: use VideoCapture(0) on a local computer.")
+cap=cv2.VideoCapture(0)
+print("Camera opened:",cap.isOpened())
+cap.release()
