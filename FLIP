@@ -1,0 +1,9 @@
+# Flip Image
+# Computer Vision Program 13
+# Run with: python 02_image_processing/13_flip.py
+
+import cv2
+from helper import sample_image
+flip = cv2.flip(sample_image(), 1)
+cv2.imwrite("flipped.jpg", flip)
+print("Flipped")
