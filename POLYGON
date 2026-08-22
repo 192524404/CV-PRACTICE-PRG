@@ -1,0 +1,10 @@
+# Polygon Approximation
+# Computer Vision Program 50
+# Run with: python 05_contours_shapes/50_polygons.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY)
+_,b=cv2.threshold(g,100,255,cv2.THRESH_BINARY)
+c,_=cv2.findContours(b,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+print("Polygon vertices:",[len(cv2.approxPolyDP(x,.04*cv2.arcLength(x,True),True)) for x in c])
