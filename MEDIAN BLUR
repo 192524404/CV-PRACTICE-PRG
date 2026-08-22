@@ -1,0 +1,9 @@
+# Median Blur
+# Computer Vision Program 20
+# Run with: python 02_image_processing/20_median_blur.py
+
+import cv2
+from helper import sample_image
+out = cv2.medianBlur(sample_image(), 7)
+cv2.imwrite("median.jpg", out)
+print("Median blur applied")
