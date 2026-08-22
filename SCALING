@@ -1,0 +1,9 @@
+# Image Scaling
+# Computer Vision Program 16
+# Run with: python 02_image_processing/16_scaling.py
+
+import cv2
+from helper import sample_image
+out = cv2.resize(sample_image(), None, fx=0.5, fy=0.5)
+cv2.imwrite("scaled.jpg", out)
+print("Scaled")
