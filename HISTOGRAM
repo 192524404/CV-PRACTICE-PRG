@@ -1,0 +1,9 @@
+# Histogram
+# Computer Vision Program 25
+# Run with: python 03_image_enhancement/25_histogram.py
+
+import cv2
+from helper import sample_image
+gray = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+hist = cv2.calcHist([gray],[0],None,[256],[0,256])
+print("Histogram bins:", len(hist))
