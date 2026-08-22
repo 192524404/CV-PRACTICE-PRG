@@ -1,0 +1,6 @@
+# Pose Detection
+# Computer Vision Program 97
+# Run with: python 10_ai_applications/97_pose_detection.py
+
+print("Pose detection demo")
+print("Recommended library: MediaPipe Pose or a YOLO pose model.")
