@@ -1,0 +1,9 @@
+# Eye Detection
+# Computer Vision Program 82
+# Run with: python 09_detection/82_eye_detection.py
+
+import cv2
+eye=cv2.CascadeClassifier(cv2.data.haarcascades+"haarcascade_eye.xml")
+img=cv2.imread("sample_face.jpg")
+if img is None: print("Place sample_face.jpg")
+else: print("Eyes:",len(eye.detectMultiScale(cv2.cvtColor(img,cv2.COLOR_BGR2GRAY))))
