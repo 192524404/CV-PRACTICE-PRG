@@ -1,0 +1,10 @@
+# Erosion
+# Computer Vision Program 36
+# Run with: python 04_segmentation_edges/36_erosion.py
+
+import cv2, numpy as np
+from helper import sample_image
+g = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+out = cv2.erode(g,np.ones((5,5),np.uint8),iterations=1)
+cv2.imwrite("erosion.jpg", out)
+print("Erosion applied")
