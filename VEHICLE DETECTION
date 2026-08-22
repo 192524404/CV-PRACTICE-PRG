@@ -1,0 +1,6 @@
+# Vehicle Detection Placeholder
+# Computer Vision Program 89
+# Run with: python 09_detection/89_vehicle_detection.py
+
+print("Vehicle detection is commonly implemented with YOLO or another trained object detector.")
+print("Use a vehicle-trained YOLO model with cv2.dnn or Ultralytics.")
