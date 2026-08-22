@@ -1,0 +1,9 @@
+# Real-Time Computer Vision Project
+# Computer Vision Program 100
+# Run with: python 10_ai_applications/100_realtime_cv_project.py
+
+import cv2
+cap=cv2.VideoCapture(0)
+print("Real-time CV starter. Camera opened:",cap.isOpened())
+cap.release()
+print("Extend this with detection, tracking, counting or alerts.")
