@@ -1,0 +1,10 @@
+# CLAHE
+# Computer Vision Program 27
+# Run with: python 03_image_enhancement/27_clahe.py
+
+import cv2
+from helper import sample_image
+gray = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+out = cv2.createCLAHE(2.0,(8,8)).apply(gray)
+cv2.imwrite("clahe.jpg", out)
+print("CLAHE applied")
