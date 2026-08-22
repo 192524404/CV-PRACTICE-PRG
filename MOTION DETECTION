@@ -1,0 +1,13 @@
+# Motion Detection
+# Computer Vision Program 75
+# Run with: python 08_video_processing/75_motion_detection.py
+
+import cv2
+cap=cv2.VideoCapture("sample.avi"); prev=None; motions=0
+while True:
+ ok,f=cap.read()
+ if not ok: break
+ g=cv2.cvtColor(f,cv2.COLOR_BGR2GRAY)
+ if prev is not None and cv2.countNonZero(cv2.absdiff(g,prev))>100: motions+=1
+ prev=g
+cap.release(); print("Motion frames:",motions)
