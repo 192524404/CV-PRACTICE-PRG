@@ -1,0 +1,13 @@
+# Draw Contours
+# Computer Vision Program 42
+# Run with: python 05_contours_shapes/42_draw_contours.py
+
+import cv2
+from helper import sample_image
+img=sample_image()
+g=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+_,b=cv2.threshold(g,100,255,cv2.THRESH_BINARY)
+c,_=cv2.findContours(b,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+cv2.drawContours(img,c,-1,(255,255,255),2)
+cv2.imwrite("contours.jpg",img)
+print("Contours drawn")
