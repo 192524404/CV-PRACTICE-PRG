@@ -1,0 +1,9 @@
+# Convex Hull
+# Computer Vision Program 69
+# Run with: python 07_features_geometry/69_convex_hull.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY); _,b=cv2.threshold(g,100,255,cv2.THRESH_BINARY)
+c,_=cv2.findContours(b,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+print("Hull points:",[len(cv2.convexHull(x)) for x in c])
