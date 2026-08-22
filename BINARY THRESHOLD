@@ -1,0 +1,8 @@
+# Binary Threshold
+# Computer Vision Program 29
+# Run with: python 03_image_enhancement/29_binary_threshold.py
+
+import cv2, numpy as np
+img = np.array([[50,100,150],[200,80,250]], dtype=np.uint8)
+_, out = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
+print(out)
