@@ -1,0 +1,9 @@
+# Blue Object Detection
+# Computer Vision Program 56
+# Run with: python 06_color_segmentation/56_blue_detection.py
+
+import cv2, numpy as np
+img=np.zeros((300,400,3),np.uint8); cv2.circle(img,(200,150),70,(255,0,0),-1)
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+m=cv2.inRange(hsv,(90,100,100),(130,255,255))
+print("Blue pixels:",cv2.countNonZero(m))
