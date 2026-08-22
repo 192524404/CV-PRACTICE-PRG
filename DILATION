@@ -1,0 +1,10 @@
+# Dilation
+# Computer Vision Program 37
+# Run with: python 04_segmentation_edges/37_dilation.py
+
+import cv2, numpy as np
+from helper import sample_image
+g = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+out = cv2.dilate(g,np.ones((5,5),np.uint8),iterations=1)
+cv2.imwrite("dilation.jpg", out)
+print("Dilation applied")
