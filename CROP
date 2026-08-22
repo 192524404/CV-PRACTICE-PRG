@@ -1,0 +1,9 @@
+# Crop Image
+# Computer Vision Program 14
+# Run with: python 02_image_processing/14_crop.py
+
+import cv2
+from helper import sample_image
+crop = sample_image()[60:260, 60:260]
+cv2.imwrite("cropped.jpg", crop)
+print("Cropped")
