@@ -1,0 +1,10 @@
+# Thresholding
+# Computer Vision Program 28
+# Run with: python 03_image_enhancement/28_threshold.py
+
+import cv2
+from helper import sample_image
+gray = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+_, out = cv2.threshold(gray, 120, 255, cv2.THRESH_BINARY)
+cv2.imwrite("threshold.jpg", out)
+print("Threshold applied")
