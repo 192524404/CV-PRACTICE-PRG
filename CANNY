@@ -1,0 +1,10 @@
+# Canny Edge Detection
+# Computer Vision Program 32
+# Run with: python 04_segmentation_edges/32_canny.py
+
+import cv2
+from helper import sample_image
+gray = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+out = cv2.Canny(gray,100,200)
+cv2.imwrite("canny.jpg", out)
+print("Canny edges detected")
