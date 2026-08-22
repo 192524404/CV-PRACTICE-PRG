@@ -1,0 +1,8 @@
+# Camera Calibration Demo
+# Computer Vision Program 63
+# Run with: python 07_features_geometry/63_camera_calibration.py
+
+import cv2, numpy as np
+obj=np.zeros((6*7,3),np.float32); obj[:,:2]=np.mgrid[0:7,0:6].T.reshape(-1,2)
+print("Chessboard points prepared:",len(obj))
+print("Use cv2.calibrateCamera with real chessboard images for calibration.")
