@@ -1,0 +1,10 @@
+# SIFT Features
+# Computer Vision Program 60
+# Run with: python 06_color_segmentation/60_sift.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY)
+sift=cv2.SIFT_create()
+kp,des=sift.detectAndCompute(g,None)
+print("SIFT keypoints:",len(kp))
