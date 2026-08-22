@@ -1,0 +1,11 @@
+# Background Subtraction
+# Computer Vision Program 76
+# Run with: python 08_video_processing/76_background_subtraction.py
+
+import cv2
+cap=cv2.VideoCapture("sample.avi"); bg=cv2.createBackgroundSubtractorMOG2(); n=0
+while True:
+ ok,f=cap.read()
+ if not ok: break
+ _=bg.apply(f); n+=1
+cap.release(); print("Frames processed:",n)
