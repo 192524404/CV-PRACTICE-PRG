@@ -1,0 +1,6 @@
+# Hand Gesture Recognition
+# Computer Vision Program 96
+# Run with: python 10_ai_applications/96_gesture_recognition.py
+
+print("Gesture recognition pipeline")
+print("Use hand landmarks and classify gestures such as OPEN, FIST, PEACE and THUMBS-UP.")
