@@ -1,0 +1,10 @@
+# Find Contours
+# Computer Vision Program 41
+# Run with: python 05_contours_shapes/41_find_contours.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY)
+_,b=cv2.threshold(g,100,255,cv2.THRESH_BINARY)
+c,_=cv2.findContours(b,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+print("Contours:",len(c))
