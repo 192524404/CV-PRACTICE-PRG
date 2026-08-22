@@ -1,0 +1,7 @@
+# Frame Difference
+# Computer Vision Program 78
+# Run with: python 08_video_processing/78_frame_difference.py
+
+import cv2, numpy as np
+a=np.zeros((200,300),np.uint8); b=a.copy(); cv2.rectangle(a,(50,50),(100,100),255,-1); cv2.rectangle(b,(70,50),(120,100),255,-1)
+diff=cv2.absdiff(a,b); print("Changed pixels:",cv2.countNonZero(diff))
