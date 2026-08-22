@@ -1,0 +1,11 @@
+# Perspective Transformation
+# Computer Vision Program 64
+# Run with: python 07_features_geometry/64_perspective.py
+
+import cv2, numpy as np
+from helper import sample_image
+img=sample_image(); src=np.float32([[60,60],[250,60],[250,250],[60,250]])
+dst=np.float32([[0,0],[200,0],[200,200],[0,200]])
+M=cv2.getPerspectiveTransform(src,dst)
+out=cv2.warpPerspective(img,M,(600,400))
+cv2.imwrite("perspective.jpg",out); print("Perspective transform done")
