@@ -1,0 +1,10 @@
+# Template Matching
+# Computer Vision Program 58
+# Run with: python 06_color_segmentation/58_template_matching.py
+
+import cv2
+from helper import sample_image
+img=sample_image(); template=img[60:260,60:260]
+res=cv2.matchTemplate(img,template,cv2.TM_CCOEFF_NORMED)
+_,score,_,loc=cv2.minMaxLoc(res)
+print("Best score:",score,"Location:",loc)
