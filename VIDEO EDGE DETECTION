@@ -1,0 +1,11 @@
+# Video Edge Detection
+# Computer Vision Program 74
+# Run with: python 08_video_processing/74_video_edges.py
+
+import cv2
+cap=cv2.VideoCapture("sample.avi"); count=0
+while True:
+ ok,f=cap.read()
+ if not ok: break
+ _=cv2.Canny(f,100,200); count+=1
+cap.release(); print("Edge frames:",count)
