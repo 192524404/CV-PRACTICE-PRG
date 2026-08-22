@@ -1,0 +1,6 @@
+# Finger Counting
+# Computer Vision Program 95
+# Run with: python 10_ai_applications/95_finger_counting.py
+
+print("Finger counting pipeline: detect hand landmarks -> calculate finger states -> count raised fingers.")
+print("Recommended library: MediaPipe Hands.")
