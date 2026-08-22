@@ -1,0 +1,9 @@
+# Contrast Adjustment
+# Computer Vision Program 24
+# Run with: python 03_image_enhancement/24_contrast.py
+
+import cv2
+from helper import sample_image
+out = cv2.convertScaleAbs(sample_image(), alpha=1.5, beta=0)
+cv2.imwrite("contrast.jpg", out)
+print("Contrast increased")
