@@ -1,0 +1,9 @@
+# Harris Corner Detection
+# Computer Vision Program 62
+# Run with: python 07_features_geometry/62_harris_corners.py
+
+import cv2, numpy as np
+from helper import sample_image
+g=np.float32(cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY))
+r=cv2.cornerHarris(g,2,3,.04)
+print("Corner pixels:",np.sum(r>0.01*r.max()))
