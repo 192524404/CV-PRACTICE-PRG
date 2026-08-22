@@ -1,0 +1,9 @@
+# Create Video
+# Computer Vision Program 71
+# Run with: python 08_video_processing/71_create_video.py
+
+import cv2, numpy as np
+out=cv2.VideoWriter("sample.avi",cv2.VideoWriter_fourcc(*"XVID"),10,(400,300))
+for i in range(30):
+ frame=np.zeros((300,400,3),np.uint8); cv2.circle(frame,(50+i*10,150),30,(0,255,0),-1); out.write(frame)
+out.release(); print("Video created")
