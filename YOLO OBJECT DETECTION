@@ -1,0 +1,7 @@
+# YOLO Object Detection
+# Computer Vision Program 99
+# Run with: python 10_ai_applications/99_yolo_detection.py
+
+print("YOLO object detection starter")
+print("Install: pip install ultralytics")
+print("Example: from ultralytics import YOLO; model=YOLO('yolo11n.pt'); model('image.jpg')")
