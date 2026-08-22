@@ -1,0 +1,11 @@
+# Video Blur
+# Computer Vision Program 79
+# Run with: python 08_video_processing/79_video_blur.py
+
+import cv2
+cap=cv2.VideoCapture("sample.avi"); n=0
+while True:
+ ok,f=cap.read()
+ if not ok: break
+ _=cv2.GaussianBlur(f,(9,9),0); n+=1
+cap.release(); print("Blurred frames:",n)
