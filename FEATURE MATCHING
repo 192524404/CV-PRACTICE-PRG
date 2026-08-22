@@ -1,0 +1,10 @@
+# Feature Matching
+# Computer Vision Program 61
+# Run with: python 07_features_geometry/61_feature_matching.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY)
+s=cv2.SIFT_create(); k,d=s.detectAndCompute(g,None)
+matches=cv2.BFMatcher().knnMatch(d,d,k=2) if d is not None else []
+print("Self matches:",len(matches))
