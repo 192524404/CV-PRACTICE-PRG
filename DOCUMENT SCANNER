@@ -1,0 +1,10 @@
+# Document Scanner
+# Computer Vision Program 93
+# Run with: python 10_ai_applications/93_document_scanner.py
+
+import cv2
+from helper import sample_image
+img=sample_image()
+g=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY); e=cv2.Canny(g,50,150)
+print("Document-scanner edge map created:",e.shape)
+cv2.imwrite("document_edges.jpg",e)
