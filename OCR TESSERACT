@@ -1,0 +1,10 @@
+# OCR with Tesseract
+# Computer Vision Program 92
+# Run with: python 10_ai_applications/92_ocr_tesseract.py
+
+try:
+ import pytesseract, cv2
+ img=cv2.imread("text.jpg")
+ print("Install Tesseract separately on local systems if required.")
+ if img is not None: print(pytesseract.image_to_string(img).strip())
+except Exception as e: print("Install pytesseract/Tesseract to run OCR:",e)
