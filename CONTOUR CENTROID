@@ -1,0 +1,11 @@
+# Contour Centroid
+# Computer Vision Program 66
+# Run with: python 07_features_geometry/66_contour_centroid.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY); _,b=cv2.threshold(g,100,255,cv2.THRESH_BINARY)
+c,_=cv2.findContours(b,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+for x in c[:3]:
+ m=cv2.moments(x)
+ if m["m00"]: print(int(m["m10"]/m["m00"]),int(m["m01"]/m["m00"]))
