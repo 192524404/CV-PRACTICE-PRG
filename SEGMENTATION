@@ -1,0 +1,11 @@
+# Image Segmentation
+# Computer Vision Program 53
+# Run with: python 06_color_segmentation/53_segmentation.py
+
+import cv2
+from helper import sample_image
+img=sample_image()
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+_,mask=cv2.threshold(gray,100,255,cv2.THRESH_BINARY)
+cv2.imwrite("segmented.jpg",mask)
+print("Segmentation completed")
