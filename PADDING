@@ -1,0 +1,9 @@
+# Image Padding
+# Computer Vision Program 17
+# Run with: python 02_image_processing/17_padding.py
+
+import cv2
+from helper import sample_image
+out = cv2.copyMakeBorder(sample_image(), 30,30,30,30, cv2.BORDER_CONSTANT, value=(0,0,0))
+cv2.imwrite("padded.jpg", out)
+print("Padded")
