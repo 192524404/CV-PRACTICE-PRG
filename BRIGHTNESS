@@ -1,0 +1,9 @@
+# Brightness Adjustment
+# Computer Vision Program 23
+# Run with: python 03_image_enhancement/23_brightness.py
+
+import cv2
+from helper import sample_image
+out = cv2.convertScaleAbs(sample_image(), alpha=1, beta=50)
+cv2.imwrite("bright.jpg", out)
+print("Brightness increased")
