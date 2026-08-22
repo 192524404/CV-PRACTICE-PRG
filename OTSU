@@ -1,0 +1,10 @@
+# Otsu Threshold
+# Computer Vision Program 31
+# Run with: python 04_segmentation_edges/31_otsu.py
+
+import cv2
+from helper import sample_image
+gray = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+_, out = cv2.threshold(gray,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+cv2.imwrite("otsu.jpg", out)
+print("Otsu threshold:", _)
