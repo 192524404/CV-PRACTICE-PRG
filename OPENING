@@ -1,0 +1,11 @@
+# Opening
+# Computer Vision Program 38
+# Run with: python 04_segmentation_edges/38_opening.py
+
+import cv2, numpy as np
+from helper import sample_image
+g = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+k=np.ones((5,5),np.uint8)
+out=cv2.morphologyEx(g,cv2.MORPH_OPEN,k)
+cv2.imwrite("opening.jpg",out)
+print("Opening applied")
