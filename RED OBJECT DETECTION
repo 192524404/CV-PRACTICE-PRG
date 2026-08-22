@@ -1,0 +1,9 @@
+# Red Object Detection
+# Computer Vision Program 55
+# Run with: python 06_color_segmentation/55_red_detection.py
+
+import cv2, numpy as np
+img=np.zeros((300,400,3),np.uint8); cv2.circle(img,(200,150),70,(0,0,255),-1)
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+m=cv2.inRange(hsv,(0,100,100),(10,255,255))
+print("Red pixels:",cv2.countNonZero(m))
