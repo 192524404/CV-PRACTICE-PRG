@@ -1,0 +1,12 @@
+# Extract Video Frames
+# Computer Vision Program 72
+# Run with: python 08_video_processing/72_extract_frames.py
+
+import cv2
+cap=cv2.VideoCapture("sample.avi"); count=0
+while True:
+ ok,frame=cap.read()
+ if not ok: break
+ if count%10==0: cv2.imwrite(f"frame_{count}.jpg",frame)
+ count+=1
+cap.release(); print("Frames processed:",count)
