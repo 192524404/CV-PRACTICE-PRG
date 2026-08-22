@@ -1,0 +1,11 @@
+# Prewitt Edge Detection
+# Computer Vision Program 35
+# Run with: python 04_segmentation_edges/35_prewitt.py
+
+import cv2, numpy as np
+from helper import sample_image
+gray = cv2.cvtColor(sample_image(), cv2.COLOR_BGR2GRAY)
+k = np.array([[-1,0,1],[-1,0,1],[-1,0,1]], dtype=np.float32)
+out = cv2.filter2D(gray,-1,k)
+cv2.imwrite("prewitt.jpg", out)
+print("Prewitt applied")
