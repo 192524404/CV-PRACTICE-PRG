@@ -1,0 +1,12 @@
+# Green Screen Removal
+# Computer Vision Program 52
+# Run with: python 06_color_segmentation/52_green_screen.py
+
+import cv2
+from helper import sample_image
+img=sample_image()
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+mask=cv2.inRange(hsv,(35,50,50),(85,255,255))
+out=cv2.bitwise_and(img,img,mask=cv2.bitwise_not(mask))
+cv2.imwrite("green_removed.jpg",out)
+print("Green-screen style mask applied")
