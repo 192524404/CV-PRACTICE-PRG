@@ -1,0 +1,7 @@
+# Hand Detection
+# Computer Vision Program 94
+# Run with: python 10_ai_applications/94_hand_detection.py
+
+print("Hand detection demo")
+print("Recommended library: MediaPipe Hands.")
+print("Install with: pip install mediapipe")
