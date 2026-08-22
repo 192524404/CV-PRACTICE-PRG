@@ -1,0 +1,9 @@
+# Hough Circles
+# Computer Vision Program 46
+# Run with: python 05_contours_shapes/46_hough_circles.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY)
+cir=cv2.HoughCircles(g,cv2.HOUGH_GRADIENT,1.2,30,param1=100,param2=40,minRadius=20,maxRadius=120)
+print("Circles detected:",0 if cir is None else len(cir[0]))
