@@ -1,0 +1,9 @@
+# Object Counting by Contours
+# Computer Vision Program 88
+# Run with: python 09_detection/88_object_counting.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY); _,b=cv2.threshold(g,100,255,cv2.THRESH_BINARY)
+c,_=cv2.findContours(b,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+print("Objects:",sum(cv2.contourArea(x)>500 for x in c))
