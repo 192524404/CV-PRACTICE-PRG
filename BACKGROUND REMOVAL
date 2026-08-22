@@ -1,0 +1,11 @@
+# Background Removal
+# Computer Vision Program 51
+# Run with: python 06_color_segmentation/51_background_removal.py
+
+import cv2
+from helper import sample_image
+img=sample_image()
+mask=cv2.inRange(img,(0,80,0),(120,255,255))
+out=cv2.bitwise_and(img,img,mask=mask)
+cv2.imwrite("foreground.jpg",out)
+print("Simple color-mask foreground created")
