@@ -1,0 +1,9 @@
+# Resize Image
+# Computer Vision Program 11
+# Run with: python 02_image_processing/11_resize.py
+
+import cv2
+from helper import sample_image
+img = cv2.resize(sample_image(), (300, 200))
+cv2.imwrite("resized.jpg", img)
+print(img.shape)
