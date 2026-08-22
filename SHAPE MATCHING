@@ -1,0 +1,9 @@
+# Shape Matching
+# Computer Vision Program 70
+# Run with: python 07_features_geometry/70_shape_matching.py
+
+import cv2
+import numpy as np
+a=np.array([[[0,0]],[[100,0]],[[100,100]],[[0,100]]],np.int32)
+b=np.array([[[0,0]],[[80,0]],[[80,80]],[[0,80]]],np.int32)
+print("Shape difference:",cv2.matchShapes(a,b,cv2.CONTOURS_MATCH_I1,0))
