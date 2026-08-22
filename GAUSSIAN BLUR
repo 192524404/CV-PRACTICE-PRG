@@ -1,0 +1,9 @@
+# Gaussian Blur
+# Computer Vision Program 19
+# Run with: python 02_image_processing/19_gaussian_blur.py
+
+import cv2
+from helper import sample_image
+out = cv2.GaussianBlur(sample_image(), (9,9), 0)
+cv2.imwrite("gaussian.jpg", out)
+print("Gaussian blur applied")
