@@ -1,0 +1,9 @@
+# Bilateral Filter
+# Computer Vision Program 21
+# Run with: python 03_image_enhancement/21_bilateral_filter.py
+
+import cv2
+from helper import sample_image
+out = cv2.bilateralFilter(sample_image(), 9, 75, 75)
+cv2.imwrite("bilateral.jpg", out)
+print("Bilateral filter applied")
