@@ -1,0 +1,10 @@
+# ORB Features
+# Computer Vision Program 59
+# Run with: python 06_color_segmentation/59_orb.py
+
+import cv2
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY)
+orb=cv2.ORB_create()
+kp,des=orb.detectAndCompute(g,None)
+print("ORB keypoints:",len(kp))
