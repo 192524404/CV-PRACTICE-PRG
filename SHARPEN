@@ -1,0 +1,10 @@
+# Sharpen Image
+# Computer Vision Program 22
+# Run with: python 03_image_enhancement/22_sharpen.py
+
+import cv2, numpy as np
+from helper import sample_image
+k = np.array([[0,-1,0],[-1,5,-1],[0,-1,0]])
+out = cv2.filter2D(sample_image(), -1, k)
+cv2.imwrite("sharp.jpg", out)
+print("Sharpened")
