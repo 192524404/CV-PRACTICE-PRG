@@ -1,0 +1,10 @@
+# Hough Lines
+# Computer Vision Program 45
+# Run with: python 05_contours_shapes/45_hough_lines.py
+
+import cv2, numpy as np
+from helper import sample_image
+g=cv2.cvtColor(sample_image(),cv2.COLOR_BGR2GRAY)
+e=cv2.Canny(g,50,150)
+lines=cv2.HoughLinesP(e,1,np.pi/180,50,minLineLength=50,maxLineGap=10)
+print("Lines detected:",0 if lines is None else len(lines))
