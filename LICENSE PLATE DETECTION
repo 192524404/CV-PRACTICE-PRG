@@ -1,0 +1,9 @@
+# License Plate Detection
+# Computer Vision Program 91
+# Run with: python 10_ai_applications/91_license_plate_detection.py
+
+import cv2
+print("License plate detection demo")
+print("For real projects, use a trained detector or OCR pipeline.")
+img=cv2.imread("vehicle.jpg")
+print("Input available:", img is not None)
